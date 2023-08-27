@@ -26,7 +26,7 @@ const Game = () => {
     setWord(selectedWord);
 
     setNewWord("_".repeat(selectedWord.length));
-    setAttempts(3);
+    setAttempts(7);
     setFeedbackColor("");
     setHint("");
     setRandom(randomIndex);
