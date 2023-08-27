@@ -191,7 +191,7 @@ const Game = () => {
       />
       <br />
       <button onClick={handleGuess}>Guess</button>
-      {word}
+{/*       {word} */}
       <br />
       <p className={`inpt ${feedbackColor}`}>{guess}</p>
       {/* Word is : {word} and newWord is : {newWord} */}
