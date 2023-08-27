@@ -4,7 +4,7 @@ import "../styles.css";
 import correctSound from "./assets/correct.mp3";
 import wrongSound from "./assets/wrong.mp3";
 import gameOverSound from "./assets/gameover.mp3";
-import cheersSound from "./assets/success.mp3"
+import cheersSound from "./assets/success.mp3";
 
 const Game = () => {
   const [word, setWord] = useState();
@@ -16,7 +16,9 @@ const Game = () => {
   const [hint, setHint] = useState("");
   const [random, setRandom] = useState(null);
   const [guessedChars, setGuessedChars] = useState([]);
-  const [btn, setBtn]=useState('');
+  // const [btn, setBtn]=useState('');
+
+  const [showPopup, setShowPopup] = useState(false);
 
   const generate = () => {
     const randomIndex = Math.floor(Math.random() * 50);
@@ -29,10 +31,9 @@ const Game = () => {
     setHint("");
     setRandom(randomIndex);
     setGuessedChars([]);
-    setBtn('');
+    setShowPopup(false);
   };
 
-  
   const again = () => {
     const randomIndex = Math.floor(Math.random() * 50);
     const selectedWord = dataset.words[randomIndex].word;
@@ -44,7 +45,7 @@ const Game = () => {
     setHint("");
     setRandom(randomIndex);
     setGuessedChars([]);
-    setBtn('');
+    // setBtn('');
   };
 
   const playSound = (sound) => {
@@ -98,6 +99,7 @@ const Game = () => {
         playSound(wrongSound);
       } else if (attempts === 1) {
         setNewWord(word);
+        setShowPopup(true);
         playSound(gameOverSound);
       } else {
         setFeedbackColor("red");
@@ -106,10 +108,12 @@ const Game = () => {
         playSound(wrongSound);
       }
     } else {
+      // debugger;
       if (newWord === word) {
         setFeedbackColor("green");
         setGuess("Right Guess");
-        // playSound(correctSound);
+        setShowPopup(true);
+        playSound(cheersSound);
         setTimeout(() => {
           setFeedbackColor("");
           setGuess("");
@@ -117,13 +121,12 @@ const Game = () => {
           // alert("Great! You Guessed the word right");
         }, 2000);
 
-        
         return;
-      }else{
-      setFeedbackColor("green");
-      setGuess("Right Guess");
+      } else {
+        playSound(correctSound);
+        setFeedbackColor("green");
+        setGuess("Right Guess");
       }
-      (word===newWord)?playSound(cheersSound):playSound(correctSound);
     }
 
     setNewWord(updatedWord);
@@ -162,14 +165,19 @@ const Game = () => {
     setHint("");
     setRandom(null);
     setGuessedChars([]);
+    setShowPopup(false);
   };
 
   return (
     <>
       <h1>This is our Awesome Word Guessing Game</h1>
-      {word?"":<p>Click the Button Below to Start the Game</p>}
-      
-      {word?<button onClick={generate}>New Word</button>:<button onClick={generate}>Start</button>}
+      {word ? "" : <p>Click the Button Below to Start the Game</p>}
+
+      {word ? (
+        <button onClick={generate}>New Word</button>
+      ) : (
+        <button onClick={generate}>Start</button>
+      )}
       <p>Attempts Left: {attempts}</p>
       <p>{hint}</p>
       <br />
@@ -183,36 +191,33 @@ const Game = () => {
       />
       <br />
       <button onClick={handleGuess}>Guess</button>
+      {word}
       <br />
       <p className={`inpt ${feedbackColor}`}>{guess}</p>
       {/* Word is : {word} and newWord is : {newWord} */}
-      { (word===newWord)?(
-          <div className="game-over-popup">
+      {showPopup && (
+        <div className="game-over-popup">
           <div className="game-over-text">
-            {playSound(cheersSound)}
-            <h5>Great</h5>
-            <p> You Guessed it Right: {word}</p>
+            {word.length === newWord.length ? (
+              <>
+                <h5>Great</h5>
+                <p> You Guessed it Right: {word}</p>
+              </>
+            ) : (
+              <>
+              attempts===0?(
+                <p>Game Over!</p>
+                <p>The word was: {word}</p>
+              ):()
+              </>
+            )}
             <button onClick={generate}>Play Again</button>
           </div>
           <button className="popup-close" onClick={closePopup}>
             &#10006; {/* Cross icon */}
           </button>
         </div>
-        ):(
-          (attempts===0)?(
-            <div className="game-over-popup">
-            <div className="game-over-text">
-              <p>Game Over!</p>
-              <p>The word was: {word}</p>
-              <button onClick={generate}>Play Again</button>
-            </div>
-            <button className="popup-close" onClick={closePopup}>
-              &#10006; {/* Cross icon */}
-            </button>
-          </div>
-          ):("")
-        )
-    }
+      )}
 
       <audio id="correctSound">
         <source src={correctSound} type="audio/mpeg" />
