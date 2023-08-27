@@ -4,9 +4,10 @@ import "../styles.css";
 import correctSound from "./assets/correct.mp3";
 import wrongSound from "./assets/wrong.mp3";
 import gameOverSound from "./assets/gameover.mp3";
+import cheersSound from "./assets/success.mp3"
 
 const Game = () => {
-  const [word, setWord] = useState("");
+  const [word, setWord] = useState();
   const [choice, setChoice] = useState("");
   const [newWord, setNewWord] = useState("");
   const [attempts, setAttempts] = useState();
@@ -15,6 +16,7 @@ const Game = () => {
   const [hint, setHint] = useState("");
   const [random, setRandom] = useState(null);
   const [guessedChars, setGuessedChars] = useState([]);
+  const [btn, setBtn]=useState('');
 
   const generate = () => {
     const randomIndex = Math.floor(Math.random() * 50);
@@ -22,11 +24,27 @@ const Game = () => {
     setWord(selectedWord);
 
     setNewWord("_".repeat(selectedWord.length));
-    setAttempts(10);
+    setAttempts(3);
     setFeedbackColor("");
     setHint("");
     setRandom(randomIndex);
     setGuessedChars([]);
+    setBtn('');
+  };
+
+  
+  const again = () => {
+    const randomIndex = Math.floor(Math.random() * 50);
+    const selectedWord = dataset.words[randomIndex].word;
+    setWord(selectedWord);
+
+    setNewWord("_".repeat(selectedWord.length));
+    setAttempts(3);
+    setFeedbackColor("");
+    setHint("");
+    setRandom(randomIndex);
+    setGuessedChars([]);
+    setBtn('');
   };
 
   const playSound = (sound) => {
@@ -88,9 +106,24 @@ const Game = () => {
         playSound(wrongSound);
       }
     } else {
+      if (newWord === word) {
+        setFeedbackColor("green");
+        setGuess("Right Guess");
+        // playSound(correctSound);
+        setTimeout(() => {
+          setFeedbackColor("");
+          setGuess("");
+          setWord("");
+          // alert("Great! You Guessed the word right");
+        }, 2000);
+
+        
+        return;
+      }else{
       setFeedbackColor("green");
       setGuess("Right Guess");
-      playSound(correctSound);
+      }
+      (word===newWord)?playSound(cheersSound):playSound(correctSound);
     }
 
     setNewWord(updatedWord);
@@ -106,7 +139,7 @@ const Game = () => {
       const timer = setTimeout(() => {
         setFeedbackColor("");
         setGuess("");
-        setHint("");
+        // setHint("");
       }, 2000);
 
       const hintTimer = setTimeout(() => {
@@ -134,7 +167,9 @@ const Game = () => {
   return (
     <>
       <h1>This is our Awesome Word Guessing Game</h1>
-      <button onClick={generate}>New Word</button>
+      {word?"":<p>Click the Button Below to Start the Game</p>}
+      
+      {word?<button onClick={generate}>New Word</button>:<button onClick={generate}>Start</button>}
       <p>Attempts Left: {attempts}</p>
       <p>{hint}</p>
       <br />
@@ -150,19 +185,34 @@ const Game = () => {
       <button onClick={handleGuess}>Guess</button>
       <br />
       <p className={`inpt ${feedbackColor}`}>{guess}</p>
-
-      {attempts === 0 && (
-        <div className="game-over-popup">
+      {/* Word is : {word} and newWord is : {newWord} */}
+      { (word===newWord)?(
+          <div className="game-over-popup">
           <div className="game-over-text">
-            <p>Game Over!</p>
-            <p>The word was: {word}</p>
+            {playSound(cheersSound)}
+            <h5>Great</h5>
+            <p> You Guessed it Right: {word}</p>
             <button onClick={generate}>Play Again</button>
           </div>
           <button className="popup-close" onClick={closePopup}>
             &#10006; {/* Cross icon */}
           </button>
         </div>
-      )}
+        ):(
+          (attempts===0)?(
+            <div className="game-over-popup">
+            <div className="game-over-text">
+              <p>Game Over!</p>
+              <p>The word was: {word}</p>
+              <button onClick={generate}>Play Again</button>
+            </div>
+            <button className="popup-close" onClick={closePopup}>
+              &#10006; {/* Cross icon */}
+            </button>
+          </div>
+          ):("")
+        )
+    }
 
       <audio id="correctSound">
         <source src={correctSound} type="audio/mpeg" />
@@ -172,6 +222,9 @@ const Game = () => {
       </audio>
       <audio id="gameOverSound">
         <source src={gameOverSound} type="audio/mpeg" />
+      </audio>
+      <audio id="cheersSound">
+        <source src={cheersSound} type="audio/mpeg" />
       </audio>
     </>
   );
