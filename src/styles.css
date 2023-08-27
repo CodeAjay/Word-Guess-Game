@@ -1,0 +1,136 @@
+/* styles.css */
+
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  /* margin: 50; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+}
+
+.App {
+  padding: 30px;
+  margin: auto;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 30px;
+  margin: 15px;
+  width: 200px !important;
+  color: black;
+}
+
+.inpt.green {
+  margin: auto;
+  width: max-content;
+  border-color: green;
+  color: white;
+  background: green;
+  border-radius: 10px;
+}
+
+.inpt.red {
+  margin: auto;
+  width: max-content;
+  border-color: red;
+  color: white;
+  background: red;
+  border-radius: 10px;
+}
+
+.input {
+  width: 40px;
+  text-align: center;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 30px;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.inpt {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+.game-over-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.game-over-text {
+  background-color: #000;
+  padding: 20px;
+  border: 2px solid #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    height: 100vh;
+  }
+  .App {
+    width: 80%;
+  }
+}

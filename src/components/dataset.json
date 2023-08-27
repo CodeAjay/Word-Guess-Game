@@ -1,0 +1,518 @@
+{
+  "words": [
+    {
+      "word": "apple",
+      "hints": [
+        "Fruit",
+        "Red or green",
+        "Common in pies",
+        "Grows on trees",
+        "Adam and Eve"
+      ]
+    },
+    {
+      "word": "banana",
+      "hints": [
+        "Yellow fruit",
+        "Curved shape",
+        "Peelable skin",
+        "Tropical",
+        "Monkeys like them"
+      ]
+    },
+    {
+      "word": "carrot",
+      "hints": [
+        "Orange vegetable",
+        "Long and slender",
+        "Good for eyesight",
+        "Crunchy",
+        "Rabbits eat them"
+      ]
+    },
+    {
+      "word": "dog",
+      "hints": [
+        "Domesticated animal",
+        "Loyal companion",
+        "Barks",
+        "Has fur",
+        "Man's best friend"
+      ]
+    },
+    {
+      "word": "elephant",
+      "hints": ["Large mammal", "Trunk", "Grey color", "Tusks", "Safari animal"]
+    },
+    {
+      "word": "flower",
+      "hints": [
+        "Blooms in gardens",
+        "Colorful petals",
+        "Attracts bees",
+        "Scent",
+        "Symbol of love"
+      ]
+    },
+    {
+      "word": "guitar",
+      "hints": [
+        "Musical instrument",
+        "Strings",
+        "Plucked or strummed",
+        "Acoustic or electric",
+        "Rock and roll"
+      ]
+    },
+    {
+      "word": "hamburger",
+      "hints": [
+        "Fast food",
+        "Beef patty",
+        "Bun",
+        "Lettuce and tomato",
+        "Served with fries"
+      ]
+    },
+    {
+      "word": "island",
+      "hints": [
+        "Land surrounded by water",
+        "Tropical paradise",
+        "Palm trees",
+        "Beaches",
+        "Vacation destination"
+      ]
+    },
+    {
+      "word": "jacket",
+      "hints": [
+        "Outerwear",
+        "Worn for warmth",
+        "Zips or buttons up",
+        "Pockets",
+        "Comes in various styles"
+      ]
+    },
+    {
+      "word": "koala",
+      "hints": [
+        "Australian marsupial",
+        "Eucalyptus leaves",
+        "Cute and cuddly",
+        "Tree-dwelling",
+        "Sleeps a lot"
+      ]
+    },
+    {
+      "word": "lemon",
+      "hints": [
+        "Citrus fruit",
+        "Sour taste",
+        "Yellow color",
+        "Used in cooking and drinks",
+        "Vitamin C"
+      ]
+    },
+    {
+      "word": "mountain",
+      "hints": [
+        "Tall landform",
+        "Summit",
+        "Hiking",
+        "Scenic views",
+        "Rocky terrain"
+      ]
+    },
+    {
+      "word": "night",
+      "hints": [
+        "Time of darkness",
+        "Stars and moon",
+        "Sleeping",
+        "Opposite of day",
+        "Owl's active time"
+      ]
+    },
+    {
+      "word": "ocean",
+      "hints": [
+        "Vast body of water",
+        "Saltwater",
+        "Marine life",
+        "Waves",
+        "Tides"
+      ]
+    },
+    {
+      "word": "penguin",
+      "hints": [
+        "Flightless bird",
+        "Black and white feathers",
+        "Antarctica",
+        "Waddling walk",
+        "Slide on ice"
+      ]
+    },
+    {
+      "word": "quartz",
+      "hints": [
+        "Mineral",
+        "Common in rocks",
+        "Crystal structure",
+        "Used in jewelry",
+        "Translucent"
+      ]
+    },
+    {
+      "word": "rainbow",
+      "hints": [
+        "Colorful arch",
+        "After rain",
+        "Sun and water droplets",
+        "ROYGBIV",
+        "Nature's spectrum"
+      ]
+    },
+    {
+      "word": "sunflower",
+      "hints": [
+        "Tall plant",
+        "Large yellow flowers",
+        "Follows the sun",
+        "Seeds used for snacking",
+        "Bright and cheerful"
+      ]
+    },
+    {
+      "word": "tiger",
+      "hints": [
+        "Big cat",
+        "Striped fur",
+        "Fierce predator",
+        "Endangered species",
+        "Roar"
+      ]
+    },
+    {
+      "word": "umbrella",
+      "hints": [
+        "Rain protection",
+        "Opens and closes",
+        "Canopy",
+        "Keeps you dry",
+        "Carried on rainy days"
+      ]
+    },
+    {
+      "word": "violin",
+      "hints": [
+        "String instrument",
+        "Bowed",
+        "Classical music",
+        "Small and portable",
+        "Concertos"
+      ]
+    },
+    {
+      "word": "waterfall",
+      "hints": [
+        "Cascade of water",
+        "Natural feature",
+        "Flowing down rocks",
+        "Scenic beauty",
+        "Refreshing"
+      ]
+    },
+    {
+      "word": "xylophone",
+      "hints": [
+        "Musical instrument",
+        "Wooden bars",
+        "Mallets",
+        "Percussion",
+        "Tuned notes"
+      ]
+    },
+    {
+      "word": "yacht",
+      "hints": [
+        "Luxury boat",
+        "Used for recreation",
+        "Sailing",
+        "Private parties",
+        "Marina"
+      ]
+    },
+    {
+      "word": "zebra",
+      "hints": [
+        "African mammal",
+        "Black and white stripes",
+        "Herbivore",
+        "Savannah",
+        "Distinctive pattern"
+      ]
+    },
+    {
+      "word": "airplane",
+      "hints": [
+        "Aircraft",
+        "Flies in the sky",
+        "Passenger transport",
+        "Wings",
+        "Jet engines"
+      ]
+    },
+    {
+      "word": "butterfly",
+      "hints": [
+        "Insect",
+        "Colorful wings",
+        "Metamorphosis",
+        "Nectar",
+        "Fluttering"
+      ]
+    },
+    {
+      "word": "chocolate",
+      "hints": [
+        "Sweet treat",
+        "Cocoa flavor",
+        "Comes in bars",
+        "Dessert",
+        "Valentine's favorite"
+      ]
+    },
+    {
+      "word": "dolphin",
+      "hints": [
+        "Marine mammal",
+        "Intelligent",
+        "Friendly",
+        "Echolocation",
+        "Trained for shows"
+      ]
+    },
+    {
+      "word": "earthquake",
+      "hints": [
+        "Tectonic movement",
+        "Ground shaking",
+        "Seismic activity",
+        "Natural disaster",
+        "Richter scale"
+      ]
+    },
+    {
+      "word": "fireworks",
+      "hints": [
+        "Explosive displays",
+        "Colorful lights",
+        "Celebrations",
+        "Fourth of July",
+        "Sparkling"
+      ]
+    },
+    {
+      "word": "giraffe",
+      "hints": [
+        "Tall African mammal",
+        "Long neck",
+        "Patchy coat",
+        "Herbivore",
+        "Leaves from trees"
+      ]
+    },
+    {
+      "word": "honeybee",
+      "hints": [
+        "Insect pollinator",
+        "Produces honey",
+        "Hive",
+        "Collects nectar",
+        "Important for agriculture"
+      ]
+    },
+    {
+      "word": "ice cream",
+      "hints": [
+        "Frozen dessert",
+        "Variety of flavors",
+        "Served in cones or cups",
+        "Sweet treat",
+        "Summer favorite"
+      ]
+    },
+    {
+      "word": "jungle",
+      "hints": [
+        "Thick vegetation",
+        "Tropical environment",
+        "Wildlife habitat",
+        "Tarzan's home",
+        "Adventure setting"
+      ]
+    },
+    {
+      "word": "kangaroo",
+      "hints": [
+        "Australian marsupial",
+        "Hops",
+        "Pouch for carrying young",
+        "Herbivore",
+        "Unique locomotion"
+      ]
+    },
+    {
+      "word": "lighthouse",
+      "hints": [
+        "Beacon of light",
+        "Navigational aid",
+        "Located on coasts",
+        "Guides ships",
+        "Tall structure"
+      ]
+    },
+    {
+      "word": "moon",
+      "hints": [
+        "Earth's natural satellite",
+        "Lunar phases",
+        "Reflects sunlight",
+        "Tides",
+        "Apollo missions"
+      ]
+    },
+    {
+      "word": "nightingale",
+      "hints": [
+        "Singing bird",
+        "Melodic song",
+        "Known for beautiful sounds",
+        "Nocturnal",
+        "Mythical associations"
+      ]
+    },
+    {
+      "word": "ostrich",
+      "hints": [
+        "Large flightless bird",
+        "Long legs",
+        "Fast runner",
+        "Native to Africa",
+        "Big eggs"
+      ]
+    },
+    {
+      "word": "panda",
+      "hints": [
+        "Black and white bear",
+        "Bamboo eater",
+        "Endangered species",
+        "Native to China",
+        "Cute appearance"
+      ]
+    },
+    {
+      "word": "quokka",
+      "hints": [
+        "Small marsupial",
+        "Native to Australia",
+        "Friendly appearance",
+        "Happy expression",
+        "Selfies"
+      ]
+    },
+    {
+      "word": "rainforest",
+      "hints": [
+        "Lush environment",
+        "High rainfall",
+        "Biodiversity",
+        "Tropical climate",
+        "Amazon and Congo examples"
+      ]
+    },
+    {
+      "word": "sailboat",
+      "hints": [
+        "Boat with sails",
+        "Wind-powered",
+        "Recreational",
+        "Nautical adventures",
+        "Regattas"
+      ]
+    },
+    {
+      "word": "toucan",
+      "hints": [
+        "Colorful bird",
+        "Large beak",
+        "Native to Central and South America",
+        "Fruit eater",
+        "Rainforest dweller"
+      ]
+    },
+    {
+      "word": "unicorn",
+      "hints": [
+        "Mythical creature",
+        "Horse-like",
+        "Single horn on forehead",
+        "Symbol of purity",
+        "Fantasy"
+      ]
+    },
+    {
+      "word": "volcano",
+      "hints": [
+        "Geological feature",
+        "Lava and ash eruptions",
+        "Mountain-like",
+        "Ring of Fire",
+        "Geothermal activity"
+      ]
+    },
+    {
+      "word": "watermelon",
+      "hints": [
+        "Sweet summer fruit",
+        "Green skin",
+        "Red or pink flesh",
+        "Juicy",
+        "Seeds"
+      ]
+    },
+    {
+      "word": "xylophone",
+      "hints": [
+        "Musical instrument",
+        "Wooden bars",
+        "Mallets",
+        "Percussion",
+        "Tuned notes"
+      ]
+    },
+    {
+      "word": "yarn",
+      "hints": [
+        "Textile material",
+        "Used for knitting and crocheting",
+        "Comes in various colors",
+        "Soft and cozy",
+        "Skeins"
+      ]
+    },
+    {
+      "word": "zeppelin",
+      "hints": [
+        "Airship",
+        "Historical transportation",
+        "Giant gas-filled envelope",
+        "Blimp",
+        "Used for travel"
+      ]
+    }
+  ]
+}
