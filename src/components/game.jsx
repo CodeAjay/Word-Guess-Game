@@ -28,24 +28,20 @@ const Game = () => {
     setNewWord("_".repeat(selectedWord.length));
     setAttempts(7);
     setFeedbackColor("");
-    setHint("");
     setRandom(randomIndex);
     setGuessedChars([]);
     setShowPopup(false);
-  };
+    const remainingHints = dataset.words[randomIndex].hints.filter(
+      (hint) => !guessedChars.includes(hint.toLowerCase())
+    );
+    const randomHintIndex = Math.floor(
+      Math.random() * remainingHints.length
+    );
+    setHint(`Hint: ${remainingHints[randomHintIndex]}`);
+    setTimeout(() => {
+      setHint("");
+    }, 5000);
 
-  const again = () => {
-    const randomIndex = Math.floor(Math.random() * 50);
-    const selectedWord = dataset.words[randomIndex].word;
-    setWord(selectedWord);
-
-    setNewWord("_".repeat(selectedWord.length));
-    setAttempts(3);
-    setFeedbackColor("");
-    setHint("");
-    setRandom(randomIndex);
-    setGuessedChars([]);
-    // setBtn('');
   };
 
   const playSound = (sound) => {
@@ -109,24 +105,23 @@ const Game = () => {
       }
     } else {
       // debugger;
-      if (newWord === word) {
+      if (!updatedWord.includes("_")) {
         setFeedbackColor("green");
         setGuess("Right Guess");
         setShowPopup(true);
         playSound(cheersSound);
-        setTimeout(() => {
+        // setTimeout(() => {
           setFeedbackColor("");
           setGuess("");
           setWord("");
           // alert("Great! You Guessed the word right");
-        }, 2000);
-
-        return;
+        // }, 2000);
       } else {
         playSound(correctSound);
         setFeedbackColor("green");
         setGuess("Right Guess");
       }
+    
     }
 
     setNewWord(updatedWord);
@@ -191,24 +186,22 @@ const Game = () => {
       />
       <br />
       <button onClick={handleGuess}>Guess</button>
-{/*       {word} */}
+            {/* {word} */}
       <br />
       <p className={`inpt ${feedbackColor}`}>{guess}</p>
       {/* Word is : {word} and newWord is : {newWord} */}
       {showPopup && (
         <div className="game-over-popup">
           <div className="game-over-text">
-            {word.length === newWord.length ? (
+            {attempts!=0? (
               <>
                 <h5>Great</h5>
                 <p> You Guessed it Right: {word}</p>
               </>
             ) : (
               <>
-              attempts===0?(
                 <p>Game Over!</p>
                 <p>The word was: {word}</p>
-              ):()
               </>
             )}
             <button onClick={generate}>Play Again</button>
