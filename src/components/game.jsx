@@ -113,7 +113,7 @@ const Game = () => {
         // setTimeout(() => {
           setFeedbackColor("");
           setGuess("");
-          setWord("");
+          // setWord("");
           // alert("Great! You Guessed the word right");
         // }, 2000);
       } else {
